@@ -207,6 +207,7 @@ err:
  * drivers sys directory, to be backwards compatible with the older
  * drivers/misc/eeprom drivers.
  */
+/*
 static int nvmem_setup_compat(struct nvmem_device *nvmem,
 			      const struct nvmem_config *config)
 {
@@ -245,6 +246,7 @@ static int nvmem_setup_compat(struct nvmem_device *nvmem,
 
 	return 0;
 }
+*/
 /**
  * nvmem_register() - Register a nvmem device for given nvmem_config.
  * Also creates an binary entry in /sys/bus/nvmem/devices/dev-name/nvmem
