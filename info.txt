@@ -1,0 +1,8 @@
+TEST3
+100hz timer
+SLAB allocator -> SLOB simple allocator (N)
+-disable compaction memory
+-Enable RCU priority boosting -> 10
+-Disable olf idle dynticks config
+-Stack protector buffer overflow detection -> Regular
+-Enabled by default tcp congestion control BBR 
