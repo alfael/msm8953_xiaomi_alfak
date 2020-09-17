@@ -4594,7 +4594,7 @@ static unsigned int binder_poll(struct file *filp,
 	binder_inner_proc_lock(thread->proc);
 	thread->looper |= BINDER_LOOPER_STATE_POLL;
 	wait_for_proc_work = thread->transaction_stack == NULL &&
-		list_empty(&thread->todo) && thread->return_error == BR_OK;
+		list_empty(&thread->todo) && thread->return_error.cmd == BR_OK;
 
 	binder_inner_proc_unlock(thread->proc);
 
