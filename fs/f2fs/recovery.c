@@ -241,7 +241,6 @@ static int recover_inode(struct inode *inode, struct page *page)
 	int err;
 
 	inode->i_mode = le16_to_cpu(raw->i_mode);
-
 	err = recover_quota_data(inode, page);
 	if (err)
 		return err;
