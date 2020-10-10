@@ -49,6 +49,14 @@ static const unsigned int tacc_mant[] = {
 	35,	40,	45,	50,	55,	60,	70,	80,
 };
 
+#ifdef CONFIG_ASYNC_FSYNC
+static unsigned int perf_degr;
+int emmc_perf_degr(void)
+{
+	return perf_degr;
+}
+#endif
+
 static const struct mmc_fixup mmc_ext_csd_fixups[] = {
 	/*
 	 * Certain Hynix eMMC 4.41 cards might get broken when HPI feature
