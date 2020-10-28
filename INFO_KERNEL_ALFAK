@@ -1,0 +1,31 @@
+*********************************************************
+==========================INFO===========================
+*********************************************************
+    - KERNEL NAME -> [ALFAK]
+    - CURRENT VERSION -> [2.4]
+    - LAST VERSION DATE -> [2020-10-28]
+    - Main purpose of this kernel is to be up to the
+      latest tag of linux 4.9 with the best delivery of
+      performance and battery to use as is. Tt's not
+      intended to be modified once installed, therefore
+      u'will have only one i/o scheduler etc... 
+
+*********************************************************
+=========================FEATURE=========================
+*********************************************************
+    - UP TO LAST LINUX KERNEL TAG -> [4.9.240]
+    - DEFAULT TCP CONGESTION CONTROL -> [BBR]
+    - DEFAULT I/O SCHEDULER -> [ANXIETY]
+    - PATCH BY FAUX123 -> [ASYNC FSYNC]
+    - TWEAK VALUES :
+        - dirty_ratio -> [5]
+        - dirty_background_ratio -> [80]
+        - dirty_expire_centisecs -> [3500]
+        - dirty_writeback_interval -> [1500]
+        - overcommit_ratio -> [85]
+        - swappiness -> [100]
+        - vfs_cache_pressure -> [80]
+        - vm_stat_interval -> [10]
+        - min_free_kbytes -> [16384]
+        - tcp_fastopen -> [3]
+    
