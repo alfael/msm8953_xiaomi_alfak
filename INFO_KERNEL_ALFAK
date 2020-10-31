@@ -2,7 +2,7 @@
 ==========================INFO===========================
 *********************************************************
     - KERNEL NAME -> [ALFAK]
-    - CURRENT VERSION -> [2.4]
+    - CURRENT VERSION -> [2.6]
     - LAST VERSION DATE -> [2020-10-28]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
@@ -13,7 +13,7 @@
 *********************************************************
 =========================FEATURE=========================
 *********************************************************
-    - UP TO LAST LINUX KERNEL TAG -> [4.9.240]
+    - UP TO LAST LINUX KERNEL TAG -> [4.9.241]
     - DEFAULT TCP CONGESTION CONTROL -> [BBR]
     - DEFAULT I/O SCHEDULER -> [ANXIETY]
     - PATCH BY FAUX123 -> [ASYNC FSYNC]
@@ -39,3 +39,7 @@
         - tcp_keepalive_time -> [6000]
         - tcp_keepalive_intvl -> [50]
         - tcp_fin_timeout -> [40]
+        - add_random -> [0]
+        - iostat -> [0]
+        - rq_affinity -> [2]
+        - blkdev_max_rq -> [256]
