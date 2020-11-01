@@ -1,6 +1,6 @@
 VERSION = 4
 PATCHLEVEL = 9
-EXTRAVERSION = -ALFAK2.5
+EXTRAVERSION = -ALFAK2.6
 SUBLEVEL = 241
 NAME = Roaring Lionus
 
@@ -303,7 +303,7 @@ CONFIG_SHELL := $(shell if [ -x "$$BASH" ]; then echo $$BASH; \
 
 HOSTCC       = gcc
 HOSTCXX      = g++
-HOSTCFLAGS   := -Wall -Wmissing-prototypes -Wstrict-prototypes -O3 -fomit-frame-pointer -std=gnu89
+HOSTCFLAGS   := -Wall -Wno-error=memset-elt-size -Wno-error=maybe-uninitialized -Wmissing-prototypes -Wstrict-prototypes -O3 -fomit-frame-pointer -std=gnu89
 HOSTCXXFLAGS = -Ofast
 
 # Decide whether to build built-in, modular, or both.
@@ -879,6 +879,10 @@ KBUILD_CFLAGS += $(call cc-disable-warning, restrict)
 
 # Enabled with W=2, disabled by default as noisy
 KBUILD_CFLAGS += $(call cc-disable-warning, maybe-uninitialized)
+
+KBUILD_CFLAGS += $(call cc-option, -Wno-error=maybe-uninitialized)
+KBUILD_CFLAGS += $(call cc-option, -Wno-error=memset-elt-size)
+KBUILD_CFLAGS += $(call cc-option, -Wno-error=duplicate-decl-specifier)
 
 # disable invalid "can't wrap" optimizations for signed / pointers
 KBUILD_CFLAGS	+= $(call cc-option,-fno-strict-overflow)
