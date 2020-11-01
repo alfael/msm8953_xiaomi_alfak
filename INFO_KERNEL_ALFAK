@@ -43,3 +43,11 @@
         - iostat -> [0]
         - rq_affinity -> [2]
         - blkdev_max_rq -> [256]
+        - readahead_max -> [2048]
+        - readahead_min -> [8]
+        - sched_min_granularity_ns -> [1000000]
+        - sched_wakeup_granbularity_ns -> [2000000]
+        - sched_latency_ns-> [15000000] <-- /!\testing/!\
+        - sched_schedstats -> [0]
+        - sched_child_runs_first -> [1] <-- /!\testing/!\
+        - sched_tunable_scaling -> [2] <-- /!\testing/!\
