@@ -118,3 +118,10 @@ all.config
 
 # fetched Android config fragments
 kernel/configs/android-*.cfg
+
+# ignore output dir
+output/
+# ignore kernel files in package dir
+package/dtb-treble/*
+package/dtb-nontreble/*
+package/kernel/*
