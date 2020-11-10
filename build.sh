@@ -6,6 +6,7 @@ export CROSS_COMPILE_ARM32=/home/schailan/Documents/kernel/toolchain/jonascardos
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_CFLAGS="-Wno-maybe-uninitialized -Wno-memset-elt-size -Wno-duplicate-decl-specifier"
+rm -r ./output/*
 make O=output clean
 make O=output mrproper
 make O=output tissot_alfak_defconfig
@@ -14,11 +15,12 @@ make O=output -j$(nproc --all) 2>&1 | tee output/build.log
 
 PATH_OUTPUT=/home/schailan/Documents/kernel/lineageos17.1_mia1_upstream/output/arch/arm64/boot
 PATH_KERN=$PATH_OUTPUT/Image.gz
-PATH_QCOM=$PATH_OUTPUT/dts/qcom/msm8953-qrd-sku3-tissot.dtb
-PATH_PACKAGE=/home/schailan/Shared/package
+PATH_QCOM=$PATH_OUTPUT/dts/qcom/
+PATH_PACKAGE=/home/schailan/Documents/kernel/lineageos17.1_mia1_upstream/package
+PATH_OUTPUT_PACKAGE=/home/schailan/Shared/final_package
 if [ ! -f "$PATH_KERN" ]; then
         echo Erreur de compilation avortement...
-        return;
+        exit;
 fi
 echo Compilation terminée !
 echo Création du package flashable...
@@ -36,10 +38,11 @@ do
         if [ ! -z "$EXTRAVERSION" ] || [  ! -z "$SUBLEVEL" ]; then
                 break;
         fi
-done < $PATH_OUTPUT/../../../../Makefile
+done < Makefile
 /bin/cp -rf $PATH_KERN $PATH_PACKAGE/kernel
-/bin/cp -rf $PATH_QCOM $PATH_PACKAGE/dtb-nontreble
+/bin/cp -rf $PATH_QCOM/msm8953-qrd-sku3-tissot-treble.dtb $PATH_PACKAGE/dtb-treble
+/bin/cp -rf $PATH_QCOM/msm8953-qrd-sku3-tissot-nontreble.dtb $PATH_PACKAGE/dtb-nontreble
 cd $PATH_PACKAGE
-zip -0 -r $PATH_PACKAGE/../final_package/$EXTRAVERSION.$SUBLEVEL.zip ./*
+zip -0 -r $PATH_OUTPUT_PACKAGE/$EXTRAVERSION.$SUBLEVEL.zip ./*
 cd -;
 echo Création du package: $EXTRAVERSION.$SUBLEVEL.zip terminée !
