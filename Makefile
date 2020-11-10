@@ -1,7 +1,7 @@
 VERSION = 4
 PATCHLEVEL = 9
 EXTRAVERSION = -ALFAK2.6
-SUBLEVEL = 241
+SUBLEVEL = 242
 NAME = Roaring Lionus
 
 # *DOCUMENTATION*
@@ -504,16 +504,10 @@ endif
 
 ifeq ($(cc-name),clang)
 ifneq ($(CROSS_COMPILE),)
-<<<<<<< HEAD
 CLANG_TRIPLE    ?= $(CROSS_COMPILE)
-CLANG_FLAGS	:= --target=$(notdir $(CLANG_TRIPLE:%-=%))
-GCC_TOOLCHAIN_DIR := $(dir $(shell which $(CROSS_COMPILE)readelf))
-CLANG_FLAGS	+= --prefix=$(GCC_TOOLCHAIN_DIR)
-=======
-CLANG_FLAGS	+= --target=$(notdir $(CROSS_COMPILE:%-=%))
 GCC_TOOLCHAIN_DIR := $(dir $(shell which $(CROSS_COMPILE)elfedit))
+CLANG_FLAGS	+= --target=$(notdir $(CROSS_COMPILE:%-=%))
 CLANG_FLAGS	+= --prefix=$(GCC_TOOLCHAIN_DIR)$(notdir $(CROSS_COMPILE))
->>>>>>> 08f1325d3e4cc6defb41bec203119eae4410d5a0
 GCC_TOOLCHAIN	:= $(realpath $(GCC_TOOLCHAIN_DIR)/..)
 endif
 ifneq ($(GCC_TOOLCHAIN),)
