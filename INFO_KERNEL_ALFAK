@@ -3,7 +3,7 @@
 *********************************************************
     - KERNEL NAME -> [ALFAK]
     - CURRENT VERSION -> [2.6]
-    - LAST VERSION DATE -> [2020-11-23]
+    - LAST VERSION DATE -> [2020-11-25]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
       performance and battery to use as is. Tt's not
@@ -13,7 +13,7 @@
 *********************************************************
 =========================FEATURE=========================
 *********************************************************
-    - UP TO LAST LINUX KERNEL TAG -> [4.9.245]
+    - UP TO LAST LINUX KERNEL TAG -> [4.9.246]
     - DEFAULT TCP CONGESTION CONTROL -> [BBR]
     - DEFAULT I/O SCHEDULER -> [ANXIETY]
     - PATCH BY FAUX123 -> [ASYNC FSYNC]
