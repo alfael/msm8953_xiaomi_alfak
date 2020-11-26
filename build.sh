@@ -1,8 +1,8 @@
 #!/bin/bash
 #export CROSS_COMPILE=/home/schailan/Documents/kernel/toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 #export PATH=$PATH:/home/schailan/Documents/kernel/toolchain/arm-linux-androideabi-4.9/bin/:/home/schailan/Documents/kernel/toolchain/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-elf/bin/
-export CROSS_COMPILE=/home/schailan/Documents/kernel/toolchain/jonascardoso/Toolchain/linaro_gcc/aarch64-linux-gnu-7.5.0-2019.12/bin/aarch64-linux-gnu-
-export CROSS_COMPILE_ARM32=/home/schailan/Documents/kernel/toolchain/jonascardoso/Toolchain/linaro_gcc/arm-eabi-7.5.0-2019.12/bin/arm-eabi-
+export CROSS_COMPILE=/home/alfael/toolchain/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-elf/bin/aarch64-elf-
+export CROSS_COMPILE_ARM32=/home/alfael/toolchain/gcc-linaro-7.5.0-2019.12-x86_64_arm-eabi/bin/arm-eabi-
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_CFLAGS="-Wno-maybe-uninitialized -Wno-memset-elt-size -Wno-duplicate-decl-specifier"
@@ -13,11 +13,11 @@ make O=output tissot_alfak_defconfig
 #make O=output menuconfig
 make O=output -j$(nproc --all) 2>&1 | tee output/build.log
 
-PATH_OUTPUT=/home/schailan/Documents/kernel/lineageos17.1_mia1_upstream/output/arch/arm64/boot
+PATH_OUTPUT=/home/alfael/msm8953_xiaomi_alfak/output/arch/arm64/boot
 PATH_KERN=$PATH_OUTPUT/Image.gz
 PATH_QCOM=$PATH_OUTPUT/dts/qcom/
-PATH_PACKAGE=/home/schailan/Documents/kernel/lineageos17.1_mia1_upstream/package
-PATH_OUTPUT_PACKAGE=/home/schailan/Shared/final_package
+PATH_PACKAGE=/home/alfael/msm8953_xiaomi_alfak/package
+PATH_OUTPUT_PACKAGE=/home/alfael/Shared/final_package
 if [ ! -f "$PATH_KERN" ]; then
         echo Erreur de compilation avortement...
         exit;
