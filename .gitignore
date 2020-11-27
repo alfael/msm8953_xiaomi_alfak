@@ -125,3 +125,8 @@ output/
 package/dtb-treble/*
 package/dtb-nontreble/*
 package/kernel/*
+
+!package/kernel/.empty
+!package/dtb-treble/.empty
+!package/dtb-nontreble/.empty
+
