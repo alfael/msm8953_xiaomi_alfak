@@ -2,7 +2,7 @@
 ==========================INFO===========================
 *********************************************************
     - KERNEL NAME -> [ALFAK]
-    - CURRENT VERSION -> [2.6]
+    - CURRENT VERSION -> [2.7]
     - LAST VERSION DATE -> [2020-11-25]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
@@ -50,3 +50,4 @@
         - sched_schedstats -> [0]
         - sched_child_runs_first -> [1] <-- /!\testing/!\
         - sched_tunable_scaling -> [2] <-- /!\testing/!\
+	- cfs_bandwidth_slice -> [4000]
