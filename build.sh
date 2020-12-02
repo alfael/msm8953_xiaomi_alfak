@@ -8,12 +8,13 @@ export KBUILD_CFLAGS="-Wno-maybe-uninitialized -Wno-memset-elt-size -Wno-duplica
 if [ ! -d "./output/" ]; then
         mkdir ./output/
 fi
+sudo mount -t tmpfs -o size=6G tmpfs output
 rm -r ./output/*
 make O=output clean
 make O=output mrproper
 make O=output tissot_alfak_defconfig
 #make O=output menuconfig
-make O=output -j$(nproc --all) 2>&1 | tee output/build.log
+make O=output -j$(nproc --all) 2>&1 | tee build.log
 
 PATH_OUTPUT=/home/alfael/msm8953_xiaomi_alfak/output/arch/arm64/boot
 PATH_KERN=$PATH_OUTPUT/Image.gz
@@ -48,3 +49,4 @@ cd $PATH_PACKAGE
 zip -0 -r $PATH_OUTPUT_PACKAGE/$EXTRAVERSION.$SUBLEVEL.zip ./*
 cd -;
 echo Création du package: $EXTRAVERSION.$SUBLEVEL.zip terminée !
+sudo umount output
