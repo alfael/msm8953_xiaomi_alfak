@@ -13,7 +13,7 @@
 *********************************************************
 =========================FEATURE=========================
 *********************************************************
-    - UP TO LAST LINUX KERNEL TAG -> [4.9.247]
+    - UP TO LAST LINUX KERNEL TAG -> [4.9.248]
     - DEFAULT TCP CONGESTION CONTROL -> [BBR]
     - DEFAULT I/O SCHEDULER -> [ANXIETY]
     - PATCH BY FAUX123 -> [ASYNC FSYNC]
