@@ -1,9 +1,11 @@
 *********************************************************
 ==========================INFO===========================
 *********************************************************
+    - TOOLCHAIN ALFAK version < 3.0 -> LINARO
+    - TOOLCHAIN ALFAK version >= 3.0 -> proton-clang
     - KERNEL NAME -> [ALFAK]
-    - CURRENT VERSION -> [2.9]
-    - LAST VERSION DATE -> [2020-12-09]
+    - CURRENT VERSION -> [3.0]
+    - LAST VERSION DATE -> [2020-12-15]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
       performance and battery to use as is. Tt's not
@@ -35,7 +37,6 @@
 	- CONFIG_DEBUG_FS_ALLOW_ALL -> [N]
 	- CONFIG_UNUSED_SYMBOLS -> [N]
 	- CONFIG_KPROBES -> [N]
-	- CONFIG_PREEMPT_NONE -> [Y]
     - TWEAK VALUES :
         - dirty_ratio -> [60]
         - dirty_background_ratio -> [30]
