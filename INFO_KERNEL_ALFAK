@@ -25,6 +25,7 @@
     - KERNEL TIMER FREQUENCY -> [1000]
     - BLK_DEV_RAM_SIZE -> [24576]
     - CPU OPT -> [DISABLE ZRAM / COMPRESSION RAM]
+    - EXT4 performance tweak -> [DEFAULT NOBARRIER / JBD2 commit 5->20/journal to writeback]
     - REDUCE DEBUGGING :
 	- CONFIG_PM_DEBUG -> [N]
 	- CONFIG_RMNET_DATA_DEBUG_PKT -> [N]
