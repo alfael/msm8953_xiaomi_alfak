@@ -2,6 +2,10 @@ if BLOCK
 
 menu "IO Schedulers"
 
+config IOSCHED_DEPRESSION
+	tristate "DEPRESSION I/O scheduler"
+	default y
+
 config IOSCHED_ANXIETY
 	tristate "Anxiety I/O scheduler"
 	default y
@@ -67,10 +71,14 @@ choice
 	config DEFAULT_ANXIETY
 		bool "anxiety" if IOSCHED_ANXIETY=y
 
+	config DEFAULT_DEPRESSION
+		bool "depression" if IOSCHED_DEPRESSION=y
+
 endchoice
 
 config DEFAULT_IOSCHED
 	string
+	default "depression" if DEFAULT_DEPRESSION
 	default "anxiety" if DEFAULT_ANXIETY
 	default "deadline" if DEFAULT_DEADLINE
 	default "cfq" if DEFAULT_CFQ

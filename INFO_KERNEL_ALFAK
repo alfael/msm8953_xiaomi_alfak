@@ -7,8 +7,8 @@
     - TOOLCHAIN ALFAK version ccurent -> [proton-clang12.210109]
 
     - KERNEL NAME -> [ALFAK]
-    - CURRENT VERSION -> [3.3]
-    - LAST VERSION DATE -> [2021-01-11]
+    - CURRENT VERSION -> [3.4]
+    - LAST VERSION DATE -> [2021-01-12]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
       performance and battery to use as is. Tt's not
@@ -19,8 +19,9 @@
 =========================FEATURE=========================
 *********************************************************
     - UP TO LAST LINUX KERNEL TAG -> [4.9.250]
+    - DEFAULT GOVERNOER -> [BLU_SCHEDUTIL]
     - DEFAULT TCP CONGESTION CONTROL -> [BBR]
-    - DEFAULT I/O SCHEDULER -> [ANXIETY]
+    - DEFAULT I/O SCHEDULER -> [DEPRESSION]
     - PATCH BY FAUX123 -> [ASYNC FSYNC]
     - WAKELOCK BLOKER -> [BOEFFLA DRIVER]
 	- LIST_WL_DEFAULT -> [qcom_rx_wakelock;wlan;wlan_wow_wl;wlan_extscan_wl;netmgr_wl;NETLINK;IPA_WS;[timerfd];wlan_ipa;wlan_pno_wl;wcnss_filter_lock;IPCRTR_lpass_rx;hal_bluetooth_lock]
