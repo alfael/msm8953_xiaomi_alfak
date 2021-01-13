@@ -9,7 +9,7 @@ export KBUILD_CFLAGS="-Wno-maybe-uninitialized -Wno-memset-elt-size -Wno-duplica
 if [ ! -d "./output/" ]; then
         mkdir ./output/
 fi
-sudo mount -t tmpfs -o size=6G tmpfs output
+#sudo mount -t tmpfs -o size=6G tmpfs output
 rm -r ./output/*
 make CC=clang O=output clean
 make CC=clang O=output mrproper
@@ -50,4 +50,4 @@ cd $PATH_PACKAGE
 zip -0 -r $PATH_OUTPUT_PACKAGE/$EXTRAVERSION.$SUBLEVEL.zip ./*
 cd -;
 echo Création du package: $EXTRAVERSION.$SUBLEVEL.zip terminée !
-sudo umount output
+#sudo umount output
