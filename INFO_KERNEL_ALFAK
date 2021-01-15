@@ -26,6 +26,7 @@
     - WAKELOCK BLOKER -> [BOEFFLA DRIVER]
 	- LIST_WL_DEFAULT -> [qcom_rx_wakelock;wlan;wlan_wow_wl;wlan_extscan_wl;netmgr_wl;NETLINK;IPA_WS;[timerfd];wlan_ipa;wlan_pno_wl;wcnss_filter_lock;IPCRTR_lpass_rx;hal_bluetooth_lock]
     - WIREGUARD VERSION -> [1.0.20201221]
+    - GOOD FINGER REACTIVITY -> [Fingerprint boost driver]
     - KERNEL TIMER FREQUENCY -> [1000]
     - CPU SAVER -> [DISABLE ZRAM / RAM COMPRESSION]
     - EXT4 PERFORMANCE TWEAK -> [DEFAULT NOBARRIER / JBD2 commit 5->20/journal to writeback]
