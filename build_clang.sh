@@ -9,18 +9,18 @@ export KBUILD_CFLAGS="-Wno-maybe-uninitialized -Wno-memset-elt-size -Wno-duplica
 if [ ! -d "./output/" ]; then
         mkdir ./output/
 fi
-#sudo mount -t tmpfs -o size=6G tmpfs output
+sudo mount -t tmpfs -o size=6G tmpfs output
 rm -r ./output/*
 make CC=clang O=output clean
 make CC=clang O=output mrproper
 make CC=clang O=output CC=clang tissot_alfak_defconfig
 #make O=output menuconfig
-make CC=clang O=output CC=clang -j$(nproc --all) 2>&1 | tee build.log
+make CC=clang O=output CC=clang -j$(nproc --all) 2>&1 AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip | tee build.log
 
-PATH_OUTPUT=/home/alfael/msm8953_xiaomi_alfak/output/arch/arm64/boot
+PATH_OUTPUT=/home/alfael/kernel/msm8953_xiaomi_alfak/output/arch/arm64/boot
 PATH_KERN=$PATH_OUTPUT/Image.gz
 PATH_QCOM=$PATH_OUTPUT/dts/qcom/
-PATH_PACKAGE=/home/alfael/msm8953_xiaomi_alfak/package
+PATH_PACKAGE=/home/alfael/kernel/msm8953_xiaomi_alfak/package
 PATH_OUTPUT_PACKAGE=/home/alfael/Shared/final_package
 if [ ! -f "$PATH_KERN" ]; then
         echo Erreur de compilation avortement...
