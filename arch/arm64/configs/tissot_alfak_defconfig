@@ -818,3 +818,7 @@ CONFIG_CC_OPTIMIZE_FOR_SIZE=n
 CONFIG_POLLY_CLANG=y
 CONFIG_CMDLINE="audit=0 mitigations=off coresight_cpu_debug.enable=0 debug=0 nowatchdog nmi_watchdog=0 no_debug_objects dyndbg=0 module.dyndbg=0"
 CONFIG_CMDLINE_EXTEND=y
+#CONFIG_LTO=y
+#CONFIG_ARCH_SUPPORTS_LTO_CLANG=y
+#CONFIG_LTO_CLANG=y
+
