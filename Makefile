@@ -1,6 +1,6 @@
 VERSION = 4
 PATCHLEVEL = 9
-EXTRAVERSION = -alfak3.6
+EXTRAVERSION = -alfak3.7
 SUBLEVEL = 252
 NAME = Roaring Lionus
 
