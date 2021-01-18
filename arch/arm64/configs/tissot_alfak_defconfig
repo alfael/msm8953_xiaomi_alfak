@@ -815,3 +815,6 @@ CONFIG_WIREGUARD=y
 CONFIG_ASYNC_FSYNC=y
 CONFIG_MACH_XIAOMI_MSM8953=y
 CONFIG_CC_OPTIMIZE_FOR_SIZE=n
+CONFIG_POLLY_CLANG=y
+CONFIG_CMDLINE="audit=0 mitigations=off coresight_cpu_debug.enable=0 debug=0 nowatchdog nmi_watchdog=0 no_debug_objects dyndbg=0 module.dyndbg=0"
+CONFIG_CMDLINE_EXTEND=y
