@@ -2,13 +2,10 @@
 ==========================INFO===========================
 *********************************************************
     - TOOLCHAIN ALFAK version < 3.0 -> LINARO
-    - TOOLCHAIN ALFAK version >= 3.0 -> proton-clang12
-    - TOOLCHAIN ALFAK version > 3.1 -> proton-clang12.201219
-    - TOOLCHAIN ALFAK version ccurent -> [proton-clang12.210109]
-
+    - TOOLCHAIN ALFAK version >= 3.0 -> proton-clang
     - KERNEL NAME -> [ALFAK]
-    - CURRENT VERSION -> [3.6]
-    - LAST VERSION DATE -> [2021-01-16]
+    - CURRENT VERSION -> [3.1]
+    - LAST VERSION DATE -> [2020-12-17]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
       performance and battery to use as is. Tt's not
@@ -18,22 +15,17 @@
 *********************************************************
 =========================FEATURE=========================
 *********************************************************
-    - UP TO LAST LINUX KERNEL TAG -> [4.9.251]
-    - DEFAULT GOVERNOER -> [BLU_SCHEDUTIL]
+    - UP TO LAST LINUX KERNEL TAG -> [4.9.248]
     - DEFAULT TCP CONGESTION CONTROL -> [BBR]
-    - DEFAULT I/O SCHEDULER -> [DEPRESSION]
+    - DEFAULT I/O SCHEDULER -> [ANXIETY]
     - PATCH BY FAUX123 -> [ASYNC FSYNC]
-    - GPU HIGH PRIORITY -> [Increase priority of RT thread kgsl+enable high priority wq]
-    - Clang 12 optimizations -> [Polly/tools]
     - WAKELOCK BLOKER -> [BOEFFLA DRIVER]
 	- LIST_WL_DEFAULT -> [qcom_rx_wakelock;wlan;wlan_wow_wl;wlan_extscan_wl;netmgr_wl;NETLINK;IPA_WS;[timerfd];wlan_ipa;wlan_pno_wl;wcnss_filter_lock;IPCRTR_lpass_rx;hal_bluetooth_lock]
-    - WIREGUARD VERSION -> [1.0.20201221]
-    - GOOD FINGER REACTIVITY -> [Fingerprint boost driver]
+    - WIREGUARD VERSION -> [1.0.20201112]
     - KERNEL TIMER FREQUENCY -> [1000]
-    - CPU SAVER -> [DISABLE ZRAM / RAM COMPRESSION]
-    - EXT4 PERFORMANCE TWEAK -> [DEFAULT NOBARRIER / JBD2 commit 5->20/journal to writeback]
-    - AUDIO TWEAK -> [SLIMBUS OC]
-    - SIZE OPTIMIZATION -> [STACK PROTECTOR BUFFER OVERFLOW DISABLE]
+    - BLK_DEV_RAM_SIZE -> [24576]
+    - CPU OPT -> [DISABLE ZRAM / COMPRESSION RAM]
+    - EXT4 performance tweak -> [DEFAULT NOBARRIER / JBD2 commit 5->20/journal to writeback]
     - REDUCE DEBUGGING :
 	- CONFIG_PM_DEBUG -> [N]
 	- CONFIG_RMNET_DATA_DEBUG_PKT -> [N]
@@ -49,14 +41,13 @@
 	- CONFIG_UNUSED_SYMBOLS -> [N]
 	- CONFIG_KPROBES -> [N]
 	- CONFIG_MSMB_CAMERA_DEBUG -> [N]
-        - and many other...
-    - TWEAK VALUES [performance/battery] :
+    - TWEAK VALUES :
         - dirty_ratio -> [60]
         - dirty_background_ratio -> [30]
         - dirty_expire_centisecs -> [3500]
         - dirty_writeback_interval -> [1500]
         - overcommit_ratio -> [85]
-        - swappiness -> [100]
+        - swappiness -> [10]
         - vfs_cache_pressure -> [80]
         - vm_stat_interval -> [10]
         - min_free_kbytes -> [16384]
@@ -85,5 +76,3 @@
         - sched_child_runs_first -> [1] <-- /!\testing/!\
         - sched_tunable_scaling -> [2] <-- /!\testing/!\
 	- cfs_bandwidth_slice -> [4000]
-	- gpu idle timeout -> [64]
-	- BLK_DEV_RAM_SIZE -> [24576]
