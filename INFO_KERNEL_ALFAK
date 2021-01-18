@@ -4,7 +4,7 @@
     - TOOLCHAIN ALFAK version < 3.0 -> LINARO
     - TOOLCHAIN ALFAK version >= 3.0 -> proton-clang12
     - TOOLCHAIN ALFAK version > 3.1 -> proton-clang12.201219
-    - TOOLCHAIN ALFAK version ccurent -> [proton-clang12.210109]
+    - TOOLCHAIN ALFAK version current -> [last version of proton-clang at kernel release date]
 
     - KERNEL NAME -> [ALFAK]
     - CURRENT VERSION -> [3.7]
