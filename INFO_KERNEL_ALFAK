@@ -7,8 +7,8 @@
     - TOOLCHAIN ALFAK version current -> [last version of proton-clang at kernel release date]
 
     - KERNEL NAME -> [ALFAK]
-    - CURRENT VERSION -> [3.8]
-    - LAST VERSION DATE -> [2021-01-26]
+    - CURRENT VERSION -> [3.9]
+    - LAST VERSION DATE -> [2021-01-28]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
       performance and battery to use as is. Tt's not
@@ -30,30 +30,17 @@
 	- LIST_WL_DEFAULT -> [qcom_rx_wakelock;wlan;wlan_wow_wl;wlan_extscan_wl;netmgr_wl;NETLINK;IPA_WS;[timerfd];wlan_ipa;wlan_pno_wl;wcnss_filter_lock;IPCRTR_lpass_rx;hal_bluetooth_lock]
     - WIREGUARD VERSION -> [1.0.20201221]
     - GOOD FINGER REACTIVITY -> [Fingerprint boost driver]
+    - BIG Little CPU enabled
     - OPTIMIZE SPINNING LOOP -> [Use optimized spinning loop for arm64 20% improvement]
     - KERNEL TIMER FREQUENCY -> [1000]
     - CPU SAVER -> [DISABLE ZRAM / RAM COMPRESSION]
     - EXT4 PERFORMANCE TWEAK -> [DEFAULT NOBARRIER / JBD2 commit 5->20/journal to writeback]
     - AUDIO TWEAK -> [SLIMBUS OC]
     - NETWORK OPTIMIZATION -> [various optimization]
-    - Better UI performance -> [GFS disabled]
-    - SIZE OPTIMIZATION -> [STACK PROTECTOR BUFFER OVERFLOW DISABLE]
-    - REDUCE DEBUGGING :
-	- CONFIG_PM_DEBUG -> [N]
-	- CONFIG_RMNET_DATA_DEBUG_PKT -> [N]
-	- CONFIG_MSM_CAMERA_DEBUG -> [N]
-	- CONFIG_USB_GADGET_DEBUG_FILES -> [N]
-	- CONFIG_USB_GADGET_DEBUG_FS -> [N]
-	- CONFIG_DEBUG_INFO -> [N]
-	- CONFIG_MAGIC_SYSRQ -> [N]
-	- CONFIG_DEBUG_KERNEL -> [N]
-	- CONFIG_DEBUG_MISC -> [N]
-	- CONFIG_DEBUG_FS -> [N]
-	- CONFIG_DEBUG_FS_ALLOW_ALL -> [N]
-	- CONFIG_UNUSED_SYMBOLS -> [N]
-	- CONFIG_KPROBES -> [N]
-	- CONFIG_MSMB_CAMERA_DEBUG -> [N]
-        - and many other...
+    - BETTER UI PERFORMANCE -> [GFS disabled]
+    - BATTERY OPTIMIZATION -> [various values tweaked]
+    - DISABLE MANY DEBUGGER FOR PERF
+    - CRC DISABLED -> [30% more perf]
     - TWEAK VALUES [performance/battery] :
         - dirty_ratio -> [60]
         - dirty_background_ratio -> [30]
@@ -94,3 +81,4 @@
 	- BLK_DEV_RAM_SIZE -> [24576]
 	- DEFAULT_CPU_TIME_MAX_PERCENT -> [15]
 	- tcp_rmem -> [131072]
+        - and few more ...
