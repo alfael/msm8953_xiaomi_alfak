@@ -28,7 +28,7 @@
     - CPU HIGH PRIORITY -> [Enable high priority wq]
     - WAKELOCK BLOKER -> [BOEFFLA DRIVER]
 	- LIST_WL_DEFAULT -> [qcom_rx_wakelock;wlan;wlan_wow_wl;wlan_extscan_wl;netmgr_wl;NETLINK;IPA_WS;[timerfd];wlan_ipa;wlan_pno_wl;wcnss_filter_lock;IPCRTR_lpass_rx;hal_bluetooth_lock]
-    - WIREGUARD VERSION -> [1.0.20201221]
+    - WIREGUARD VERSION -> [1.0.20210124]
     - GOOD FINGER REACTIVITY -> [Fingerprint boost driver]
     - BIG Little CPU enabled
     - OPTIMIZE SPINNING LOOP -> [Use optimized spinning loop for arm64 20% improvement]
