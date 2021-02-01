@@ -7,8 +7,8 @@
     - TOOLCHAIN ALFAK version current -> [last version of proton-clang at kernel release date]
 
     - KERNEL NAME -> [ALFAK]
-    - CURRENT VERSION -> [3.9]
-    - LAST VERSION DATE -> [2021-01-28]
+    - CURRENT VERSION -> [4.0]
+    - LAST VERSION DATE -> [2021-02-01]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
       performance and battery to use as is. Tt's not
@@ -18,7 +18,7 @@
 *********************************************************
 =========================FEATURE=========================
 *********************************************************
-    - UP TO LAST LINUX KERNEL TAG -> [4.9.253]
+    - UP TO LAST LINUX KERNEL TAG -> [4.9.254]
     - DEFAULT GOVERNOER -> [BLU_SCHEDUTIL]
     - DEFAULT TCP CONGESTION CONTROL -> [BBR]
     - DEFAULT I/O SCHEDULER -> [ANXIETY]
@@ -30,7 +30,7 @@
 	- LIST_WL_DEFAULT -> [qcom_rx_wakelock;wlan;wlan_wow_wl;wlan_extscan_wl;netmgr_wl;NETLINK;IPA_WS;[timerfd];wlan_ipa;wlan_pno_wl;wcnss_filter_lock;IPCRTR_lpass_rx;hal_bluetooth_lock]
     - WIREGUARD VERSION -> [1.0.20210124]
     - GOOD FINGER REACTIVITY -> [Fingerprint boost driver]
-    - BIG Little CPU enabled
+    - Big.LITTLE CPU ENABLED
     - OPTIMIZE SPINNING LOOP -> [Use optimized spinning loop for arm64 20% improvement]
     - KERNEL TIMER FREQUENCY -> [1000]
     - CPU SAVER -> [DISABLE ZRAM / RAM COMPRESSION]
@@ -39,8 +39,10 @@
     - NETWORK OPTIMIZATION -> [various optimization]
     - BETTER UI PERFORMANCE -> [GFS disabled]
     - BATTERY OPTIMIZATION -> [various values tweaked]
+    - MEMORY OPTIMIZATION -> [various fix and improvement]
     - DISABLE MANY DEBUGGER FOR PERF
     - CRC DISABLED -> [30% more perf]
+    - LOW MEMORY KILLER REPLACEMENT -> [SIMPLE LMK by KERNELTOAST]
     - TWEAK VALUES [performance/battery] :
         - dirty_ratio -> [60]
         - dirty_background_ratio -> [30]
