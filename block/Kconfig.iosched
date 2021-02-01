@@ -15,6 +15,10 @@ config IOSCHED_ANXIETY
 	  implemented as doubly linked lists and prioritizes reads over
           writes.
 
+config IOSCHED_MAPLE
+	tristate "Maple I/O scheduler"
+	default y
+
 config IOSCHED_NOOP
 	bool
 	default n
@@ -54,7 +58,7 @@ config CFQ_GROUP_IOSCHED
 
 choice
 	prompt "Default I/O scheduler"
-	default DEFAULT_CFQ
+	default DEFAULT_MAPLE
 	help
 	  Select the I/O scheduler which will be used by default for all
 	  block devices.
@@ -74,6 +78,9 @@ choice
 	config DEFAULT_DEPRESSION
 		bool "depression" if IOSCHED_DEPRESSION=y
 
+	config DEFAULT_MAPLE
+		bool "maple" if IOSCHED_MAPLE=y
+
 endchoice
 
 config DEFAULT_IOSCHED
@@ -83,7 +90,7 @@ config DEFAULT_IOSCHED
 	default "deadline" if DEFAULT_DEADLINE
 	default "cfq" if DEFAULT_CFQ
 	default "noop" if DEFAULT_NOOP
-
+	default "maple" if DEFAULT_MAPLE
 endmenu
 
 endif
