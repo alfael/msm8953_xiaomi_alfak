@@ -21,7 +21,7 @@
     - UP TO LAST LINUX KERNEL TAG -> [4.9.254]
     - DEFAULT GOVERNOER -> [BLU_SCHEDUTIL]
     - DEFAULT TCP CONGESTION CONTROL -> [BBR]
-    - DEFAULT I/O SCHEDULER -> [ANXIETY]
+    - DEFAULT I/O SCHEDULER -> [MAPLE]
     - PATCH BY FAUX123 -> [ASYNC FSYNC]
     - BUILD WITH FLAGS -> [O3/LLVM Polly Optimize Clang]
     - GPU HIGH PRIORITY -> [Increase priority of RT thread kgsl+enable high priority wq]
