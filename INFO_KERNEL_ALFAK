@@ -7,7 +7,7 @@
     - TOOLCHAIN ALFAK version current -> [last version of proton-clang at kernel release date]
 
     - KERNEL NAME -> [ALFAK]
-    - CURRENT VERSION -> [4.1]
+    - CURRENT VERSION -> [4.2]
     - LAST VERSION DATE -> [2021-02-04]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
@@ -44,6 +44,7 @@
     - CRC DISABLED -> [PERFORMANCE IMPROVEMENT]
     - SIMPLE LMK by KERNELTOAST -> [PERFORMANCE IMPROVEMENT]
     - ADRENO IDLER WITH STATE NOTIFIER DRIVER -> [BATTERY IMPROVEMENT]
+    - DYNAMIC STUNE SCHED BOOST
     - TWEAK VALUES [performance/battery] :
         - dirty_ratio -> [60]
         - dirty_background_ratio -> [30]
