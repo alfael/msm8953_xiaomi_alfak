@@ -21,8 +21,8 @@
     - UP TO LAST LINUX KERNEL TAG -> [4.9.255]
     - DEFAULT GOVERNOER -> [BLU_SCHEDUTIL]
     - DEFAULT TCP CONGESTION CONTROL -> [BBR]
-    - DEFAULT I/O SCHEDULER -> [MAPLE]
-    - DYNAMIC FSYNC V2 WITH STATE NOTIFIER DRIVER
+    - DEFAULT I/O SCHEDULER -> [MAPLE WITH STATE NOTIFIER DRIVER]
+    - DYNAMIC FSYNC V2 WITH STATE NOTIFIER DRIVER -> [PERFORMANCE IMPROVEMENT]
     - BUILD WITH FLAGS -> [O3/LLVM Polly Optimize Clang]
     - GPU HIGH PRIORITY -> [Increase priority of RT thread kgsl+enable high priority wq]
     - CPU HIGH PRIORITY -> [Enable high priority wq]
@@ -41,9 +41,9 @@
     - BATTERY OPTIMIZATION -> [various values tweaked]
     - MEMORY OPTIMIZATION -> [various fix and improvement]
     - DISABLE MANY DEBUGGER FOR PERF
-    - CRC DISABLED -> [30% more perf]
-    - LOW MEMORY KILLER REPLACEMENT -> [SIMPLE LMK by KERNELTOAST]
-    - 
+    - CRC DISABLED -> [PERFORMANCE IMPROVEMENT]
+    - SIMPLE LMK by KERNELTOAST -> [PERFORMANCE IMPROVEMENT]
+    - ADRENO IDLER WITH STATE NOTIFIER DRIVER -> [BATTERY IMPROVEMENT]
     - TWEAK VALUES [performance/battery] :
         - dirty_ratio -> [60]
         - dirty_background_ratio -> [30]
