@@ -45,11 +45,7 @@ struct maple_data {
 	int fifo_expire[2][2];
 	int fifo_batch;
 	int writes_starved;
-	int sleep_latency_multiple;
-
-	/* Display state */
-	struct notifier_block fb_notifier;
-	bool display_on;
+  int sleep_latency_multiple;
 };
 
 static inline struct maple_data *
@@ -264,32 +260,6 @@ maple_latter_request(struct request_queue *q, struct request *rq)
 	return list_entry(rq->queuelist.next, struct request, queuelist);
 }
 
-static int fb_notifier_callback(struct notifier_block *self,
-				unsigned long event, void *data)
-{
-	struct maple_data *mdata = container_of(self,
-									struct maple_data, fb_notifier);
-	struct fb_event *evdata = data;
-	int *blank;
-
-	if (evdata && evdata->data && event == FB_EVENT_BLANK) {
-		blank = evdata->data;
-		switch (*blank) {
-			case FB_BLANK_UNBLANK:
-				mdata->display_on = true;
-				break;
-			case FB_BLANK_POWERDOWN:
-			case FB_BLANK_HSYNC_SUSPEND:
-			case FB_BLANK_VSYNC_SUSPEND:
-			case FB_BLANK_NORMAL:
-				mdata->display_on = false;
-				break;
-		}
-	}
-
-	return 0;
-}
-
 static int maple_init_queue(struct request_queue *q, struct elevator_type *e)
 {
 	struct maple_data *mdata;
@@ -306,9 +276,6 @@ static int maple_init_queue(struct request_queue *q, struct elevator_type *e)
 		return -ENOMEM;
 	}
 	eq->elevator_data = mdata;
-
-	mdata->fb_notifier.notifier_call = fb_notifier_callback;
-	fb_register_client(&mdata->fb_notifier);
 
 	/* Initialize fifo lists */
 	INIT_LIST_HEAD(&mdata->fifo_list[SYNC][READ]);
@@ -336,8 +303,6 @@ static void
 maple_exit_queue(struct elevator_queue *e)
 {
 	struct maple_data *mdata = e->elevator_data;
-
-	fb_unregister_client(&mdata->fb_notifier);
 
 	/* Free structure */
 	kfree(mdata);
