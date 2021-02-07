@@ -19,6 +19,7 @@
 =========================FEATURE=========================
 *********************************************************
     - UP TO LAST LINUX KERNEL TAG -> [4.9.255]
+    - POWER EFFICIENT WORKQUEUE
     - DEFAULT GOVERNOER -> [BLU_SCHEDUTIL]
     - DEFAULT TCP CONGESTION CONTROL -> [BBR]
     - DEFAULT I/O SCHEDULER -> [MAPLE WITH STATE NOTIFIER DRIVER]
