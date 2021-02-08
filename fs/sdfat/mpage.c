@@ -90,7 +90,7 @@ static inline void bio_set_dev(struct bio *bio, struct block_device *bdev)
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 10, 0)
 static inline void __sdfat_clean_bdev_aliases(struct block_device *bdev, sector_t block)
 {
-	clean_bdev_aliases(bdev, block, 1);
+	// clean_bdev_aliases(bdev, block, 1);
 }
 #else /* LINUX_VERSION_CODE < KERNEL_VERSION(4,10,0) */
 static inline void __sdfat_clean_bdev_aliases(struct block_device *bdev, sector_t block)
