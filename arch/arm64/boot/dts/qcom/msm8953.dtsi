@@ -879,7 +879,7 @@
 		qcom,gcc_oxili_gfx3d_clk-opp-handle = <&msm_gpu>;
 		qcom,gfxfreq-corner = 
 			 <         0   0 >,
-			 <  19200000   1 >,  /* XO        */
+			 <  19200000   1 >,  /* Standby   */
 			 < 133330000   2 >,  /* Min SVS   */
 			 < 216000000   3 >,  /* Low SVS   */
 			 < 320000000   4 >,  /* SVS       */
