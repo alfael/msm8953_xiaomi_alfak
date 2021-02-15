@@ -374,6 +374,7 @@ static struct rcg_clk vfe0_clk_src = {
 
 static struct clk_freq_tbl ftbl_gfx3d_clk_src[] = {
 	F_MM(  19200000, FIXED_CLK_SRC,                  xo,    1,    0,     0),
+	F_MM(  44000000, FIXED_CLK_SRC,  gpll0_main_div2_mm,    8,    0,     0),
 	F_MM(  50000000, FIXED_CLK_SRC,  gpll0_main_div2_mm,    8,    0,     0),
 	F_MM(  80000000, FIXED_CLK_SRC,  gpll0_main_div2_mm,    5,    0,     0),
 	F_MM( 100000000, FIXED_CLK_SRC,  gpll0_main_div2_mm,    4,    0,     0),
