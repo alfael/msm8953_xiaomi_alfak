@@ -135,7 +135,7 @@ unsigned int sysctl_sched_child_runs_first __read_mostly = 1U;
 unsigned int sysctl_sched_wakeup_granularity = 500000ULL;
 unsigned int normalized_sysctl_sched_wakeup_granularity = 500000ULL;
 
-const_debug unsigned int sysctl_sched_migration_cost = 300000ULL;
+const_debug unsigned int sysctl_sched_migration_cost = 750000ULL;
 
 /*
  * The exponential sliding  window over which load is averaged for shares
