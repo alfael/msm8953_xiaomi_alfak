@@ -732,7 +732,7 @@ endif
 ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
 KBUILD_CFLAGS   += -Os
 else
-KBUILD_CFLAGS   += -O3
+KBUILD_CFLAGS   += -O3 -funsafe-math-optimizations -mfloat-abi=hard -mtune=cortex-a53 -mfpu=crypto-neon-fp-armv8
 endif
 
 ifdef CONFIG_CC_WERROR
