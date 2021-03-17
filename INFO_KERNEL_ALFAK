@@ -2,9 +2,9 @@
 ==========================INFO===========================
 *********************************************************
     - KERNEL NAME -> [ALFAK]
-    - TOOLCHAIN LAST RELEASE KERNEL DATE -> [proton clang 13]
-    - CURRENT VERSION -> [5.4]
-    - LAST VERSION DATE -> [2021-03-15]
+    - TOOLCHAIN LAST RELEASE KERNEL DATE -> [proton clang by kdrag0n]
+    - CURRENT VERSION -> [5.5]
+    - LAST VERSION DATE -> [2021-03-17]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
       performance and battery to use as is. Tt's not
@@ -29,7 +29,7 @@
 	- LIST_WL_DEFAULT -> [qcom_rx_wakelock;wlan;wlan_wow_wl;wlan_extscan_wl;netmgr_wl;NETLINK;IPA_WS;[timerfd];wlan_ipa;wlan_pno_wl;wcnss_filter_lock;IPCRTR_lpass_rx;hal_bluetooth_lock]
     - WIREGUARD VERSION -> [1.0.20210219]
     - GOOD FINGER REACTIVITY -> [Fingerprint boost driver]
-    - OPTIMIZE SPINNING LOOP -> [Use optimized spinning loop for arm64 20% improvement]
+    - ARM64 OPTIMIZATIONS
     - KERNEL TIMER FREQUENCY -> [1000]
     - CPU SAVER -> [DISABLE ZRAM / RAM COMPRESSION]
     - EXT4 PERFORMANCE TWEAK -> [DEFAULT NOBARRIER / JBD2 commit 5->20/journal to writeback]
@@ -42,55 +42,8 @@
     - CRC DISABLED -> [PERFORMANCE IMPROVEMENT]
     - SIMPLE LMK by KERNELTOAST -> [PERFORMANCE IMPROVEMENT]
     - ADRENO IDLER WITH STATE NOTIFIER DRIVER -> [BATTERY IMPROVEMENT]
-    - DYNAMIC STUNE SCHED BOOST
+    - DYNAMIC STUNE SCHED BOOST -> [PERFORMANCE IMPROVEMENT]
     - GPU IDLE FREQUENCY -> [133Mhz/pwrlevel->6]
     - NO_HZ_FULL
     - MSM8953 SOUND CONTROL BY KHUSIKA
-    - TWEAK VALUES [performance/battery] :
-        - dirty_ratio -> [60]
-        - dirty_background_ratio -> [30]
-        - dirty_expire_centisecs -> [3500]
-        - dirty_writeback_interval -> [1500]
-        - overcommit_ratio -> [85]
-        - swappiness -> [5]
-        - vfs_cache_pressure -> [80]
-        - vm_stat_interval -> [20]
-        - min_free_kbytes -> [16384]
-        - tcp_fastopen -> [3]
-        - tcp_tw_reuse -> [1]
-        - tcp_low_latency -> [1]
-        - tcp_timestamps -> [0]
-        - tcp_adv_win_scale -> [2]
-        - tcp_ecn -> [1]
-        - tcp_slow_start_after_idle -> [0]
-        - tcp_keepalive_probes -> [4]
-        - tcp_keepalive_time -> [6000]
-        - tcp_keepalive_intvl -> [50]
-        - tcp_fin_timeout -> [40]
-        - add_random -> [0]
-        - iostat -> [0]
-        - rq_affinity -> [2]
-        - blkdev_max_rq -> [64]
-	- blkcg_max_pols -> [5]
-        - readahead_max -> [64]
-        - readahead_min -> [8]
-        - sched_min_granularity_ns -> [600000]
-        - sched_wakeup_granbularity_ns -> [500000]
-        - sched_latency_ns-> [3000000] <-- /!\testing/!\
-        - sched_schedstats -> [0]
-        - sched_child_runs_first -> [1] <-- /!\testing/!\
-        - sched_tunable_scaling -> [2] <-- /!\testing/!\
-	- sysctl_sched_migration_cost  -> [750000]
-	- cfs_bandwidth_slice -> [4000]
-	- gpu idle timeout -> [64]
-	- BLK_DEV_RAM_SIZE -> [24576]
-	- DEFAULT_CPU_TIME_MAX_PERCENT -> [15]
-	- tcp_rmem -> [131072]
-	- fp-boost_duration -> [800]
-	- adreno_idler_idleworload -> [6000]
-	- adreno_idler_idlewait -> [20]
-	- gpu_target-powrlevel -> [2]
-	- gpu_initial-pwrlevel -> [7]
-	- lease break time -> [85]
-	- entropy -> [r64/w192/s90]
-        - and few more ...
+    - MANY VALUES TWEAKED FOR NETWORK/MEMORY/SCHEDULER/BATTERY ETC ....
