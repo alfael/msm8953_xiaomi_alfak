@@ -3,8 +3,8 @@
 *********************************************************
     - KERNEL NAME -> [ALFAK]
     - TOOLCHAIN LAST RELEASE KERNEL DATE -> [proton clang by kdrag0n]
-    - CURRENT VERSION -> [5.6]
-    - LAST VERSION DATE -> [2021-03-31]
+    - CURRENT VERSION -> [5.7]
+    - LAST VERSION DATE -> [2021-04-13]
     - Main purpose of this kernel is to be up to the
       latest tag of linux 4.9 with the best delivery of
       performance and battery to use as is. Tt's not
@@ -14,13 +14,13 @@
 *********************************************************
 =========================FEATURE=========================
 *********************************************************
-    - UP TO LAST LINUX KERNEL TAG -> [4.9.264]
+    - UP TO LAST LINUX KERNEL TAG -> [4.9.267]
     - LATENCY PRIORITIZE OVER THROUGHPUT
     - PATCH SAFETYNET FLAGS
     - POWER EFFICIENT WORKQUEUE
     - DEFAULT GOVERNOR -> [SCHEDUTIL]
     - DEFAULT TCP CONGESTION CONTROL -> [BBR]
-    - DEFAULT I/O SCHEDULER -> [MAPLE WITH STATE NOTIFIER DRIVER]
+    - DEFAULT I/O SCHEDULER -> [DEPRESSION]
     - DYNAMIC FSYNC V2 WITH STATE NOTIFIER DRIVER -> [PERFORMANCE IMPROVEMENT]
     - BUILD WITH FLAGS -> [O3/LLVM Polly Optimize Clang]
     - GPU HIGH PRIORITY -> [Increase priority of RT thread kgsl+enable high priority wq]
